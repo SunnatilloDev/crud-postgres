@@ -1,14 +1,4 @@
 class extraServices {
-    checkValidBody(body: {}, validBodyKeys: string[]): boolean {
-        let keysOfBody = Object.keys(body);
-
-        for (let i = 0; i < validBodyKeys.length; i++) {
-            if (!validBodyKeys.includes(keysOfBody[i])) {
-                return false;
-            }
-        }
-        return true;
-    }
     generateUpdateQueryToInsert(user: object, id: string) {
         const keys = Object.keys(user);
         const values: string[] = Object.values(user);
